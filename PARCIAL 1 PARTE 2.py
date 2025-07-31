@@ -33,7 +33,7 @@ while True:
         print("4. convertir un numero decimal a binario")
         print("5. calcular cuantos digitos tienen un numero")
         print("6. salir")
-        op = input("opcion: ")
+        op = input("opcion")
 
         match op:
             case "1":
