@@ -26,49 +26,39 @@ def calcular(n):
         return 1
     return 1+calcular(n//10)
 
-
-def menu():
-    while True:
+while True:
         print("1. calcular el MCD de dos numeros")
         print("2. crear una cadena repetida N veces")
         print("3. contar cuantas veces aparece una letra en una cadena")
         print("4. convertir un numero decimal a binario")
         print("5. calcular cuantos digitos tienen un numero")
         print("6. salir")
-        op = int(input("ingrese opcion"))
+        op = input("Opcion: ")
 
         match op:
-
-            case 1:
-                a=int(input("ingrese el valor del primer numero"))
-                b=int(input("ingrese el valor del segundo numero"))
-                print(f"el MCD es{mcd}")
-
-            case 2:
-                palabra=int(input("ingrese la palabra"))
-                veces=int(input("repetir cuantas veces"))
-                print(f"resultado{repetir}")
-
-            case 3:
-                cadena=input("ingrese la palabra")
-                letra=input("ingrese la letra que ")
-                print(f"La letra {letra} aparece {contar} veces")
-
-            case 4:
-                decimal=int(input("ingrese el numero en decimal"))
-                print(f"el numero {decimal} a binario es {binario}")
-
-            case 5:
-                numero=int(input("ingrese el numero"))
-                print(f"el numero tiene {calcular} digitos")
-            case 6:
+            case "1":
+                a= int(input("ingres primer numero"))
+                b=int(input("ingrese segundo numero"))
+                print("MCD:", mcd(a, b))
+            case "2":
+                cadena = input("ingrese el texto ")
+                numero = int(input("cuantas veces: "))
+                print("Resultado:", repetir(cadena, numero))
+            case "3":
+                cadena = input("ingrese le texto")
+                letra = input("que letra desea contar")
+                print("la letra aparece", contar(cadena, letra))
+            case "4":
+                n=int(input("ingres numero decimal"))
+                if n==0:
+                    print("binario 0")
+                else:
+                    print("Binario",binario(n))
+            case "5":
+                n = int(input("ingres numero "))
+                print("digitos:", calcular(n))
+            case "6":
                 print("saliendo")
                 break
-        case_:
-            print("Opcion invalida")
-
-
-print()
-
-
-
+            case _:
+                print("error")
