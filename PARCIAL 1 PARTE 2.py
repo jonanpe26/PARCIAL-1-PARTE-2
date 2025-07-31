@@ -14,7 +14,10 @@ def contar(cadena, letra, i=0):
     suma = 1 if cadena[i] == letra else 0
     return suma + contar(cadena, letra, i + 1)
 
-
+def binario(n):
+    if n == 0:
+        return ""
+    return binario(n // 2) + str(n % 2)
 
 def menu():
     while True:
@@ -31,4 +34,12 @@ def menu():
             case 1:
                 a=int(input("ingrese el valor del primer numero"))
                 b=int(input("ingrese el valor del segundo numero"))
+
+            case 2:
+                palabra=int(input("ingrese la palabra"))
+                veces=int(input("repetir cuantas veces"))
+
+            case 3:
+                cadena=input("ingrese la palabra")
+                letra=input("ingrese la letra que ")
 
