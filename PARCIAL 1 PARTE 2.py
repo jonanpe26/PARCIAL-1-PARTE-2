@@ -4,4 +4,5 @@ def mcd(a, b):
     return mcd(b, a % b)
 
 def repetir(c, n):
+    if n <= 0:
 
