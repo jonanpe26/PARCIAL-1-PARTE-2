@@ -1,23 +1,31 @@
-def mcd(a, b):
-    if b == 0:
+def mcd(a,b):
+    if b ==0:
         return a
-    return mcd(b, a % b)
+    return mcd(b,a%b)
 
-def repetir(c, n):
-    if n <= 0:
+def repetir(c,n):
+    if n<=0:
         return ""
-    return c + repetir(c, n - 1)
+    return c + repetir(c,n-1)
 
-def contar(cadena, letra, i=0):
-    if i == len(cadena):
+def contar(cadena,letra,i=0):
+    if i==len(cadena):
         return 0
-    suma = 1 if cadena[i] == letra else 0
-    return suma + contar(cadena, letra, i + 1)
+    suma=1 if cadena[i]==letra else 0
+    return suma+contar(cadena,letra,i+1)
 
 def binario(n):
-    if n == 0:
+    if n ==0:
         return ""
-    return binario(n // 2) + str(n % 2)
+    return binario(n//2)+str(n%2)
+
+def contar(n):
+    if n <0:
+        n =-n
+    if n < 10:
+        return 1
+    return 1+contar(n//10)
+
 
 def menu():
     while True:
@@ -29,7 +37,7 @@ def menu():
         print("6. salir")
         op =
 
-        match case:
+        match op:
 
             case 1:
                 a=int(input("ingrese el valor del primer numero"))
@@ -42,4 +50,10 @@ def menu():
             case 3:
                 cadena=input("ingrese la palabra")
                 letra=input("ingrese la letra que ")
+
+            case 4:
+                decimal=int(input("ingrese el numero en decimal"))
+
+            case 5:
+                numero=int(input("ingrese el numero"))
 
