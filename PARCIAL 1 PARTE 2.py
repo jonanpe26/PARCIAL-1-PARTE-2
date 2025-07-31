@@ -33,7 +33,7 @@ while True:
         print("4. convertir un numero decimal a binario")
         print("5. calcular cuantos digitos tienen un numero")
         print("6. salir")
-        op = input("Opcion: ")
+        op = input("opcion: ")
 
         match op:
             case "1":
@@ -41,9 +41,9 @@ while True:
                 b=int(input("ingrese segundo numero"))
                 print("MCD:", mcd(a, b))
             case "2":
-                cadena = input("ingrese el texto ")
-                numero = int(input("cuantas veces: "))
-                print("Resultado:", repetir(cadena, numero))
+                cadena = input("ingrese el texto")
+                numero = int(input("cuantas veces"))
+                print("Resultad", repetir(cadena, numero))
             case "3":
                 cadena = input("ingrese le texto")
                 letra = input("que letra desea contar")
@@ -55,8 +55,8 @@ while True:
                 else:
                     print("Binario",binario(n))
             case "5":
-                n = int(input("ingres numero "))
-                print("digitos:", calcular(n))
+                n = int(input("ingres numero"))
+                print("digitos", calcular(n))
             case "6":
                 print("saliendo")
                 break
