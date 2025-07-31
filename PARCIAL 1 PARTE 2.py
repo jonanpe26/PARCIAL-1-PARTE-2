@@ -1,5 +1,5 @@
 def mcd(a,b):
-    if b ==0:
+    if b==0:
         return a
     return mcd(b,a%b)
 
@@ -15,16 +15,16 @@ def contar(cadena,letra,i=0):
     return suma+contar(cadena,letra,i+1)
 
 def binario(n):
-    if n ==0:
+    if n==0:
         return ""
     return binario(n//2)+str(n%2)
 
-def contar(n):
+def calcular(n):
     if n <0:
         n =-n
     if n < 10:
         return 1
-    return 1+contar(n//10)
+    return 1+calcular(n//10)
 
 
 def menu():
@@ -35,25 +35,40 @@ def menu():
         print("4. convertir un numero decimal a binario")
         print("5. calcular cuantos digitos tienen un numero")
         print("6. salir")
-        op =
+        op = int(input("ingrese opcion"))
 
         match op:
 
             case 1:
                 a=int(input("ingrese el valor del primer numero"))
                 b=int(input("ingrese el valor del segundo numero"))
+                print(f"el MCD es{mcd}")
 
             case 2:
                 palabra=int(input("ingrese la palabra"))
                 veces=int(input("repetir cuantas veces"))
+                print(f"resultado{repetir}")
 
             case 3:
                 cadena=input("ingrese la palabra")
                 letra=input("ingrese la letra que ")
+                print(f"La letra {letra} aparece {contar} veces")
 
             case 4:
                 decimal=int(input("ingrese el numero en decimal"))
+                print(f"el numero {decimal} a binario es {binario}")
 
             case 5:
                 numero=int(input("ingrese el numero"))
+                print(f"el numero tiene {calcular} digitos")
+            case 6:
+                print("saliendo")
+                break
+        case_:
+            print("Opcion invalida")
+
+
+print()
+
+
 
