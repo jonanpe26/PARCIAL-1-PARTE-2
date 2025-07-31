@@ -5,4 +5,5 @@ def mcd(a, b):
 
 def repetir(c, n):
     if n <= 0:
-
+        return ""
+    return c + repetir(c, n - 1)
